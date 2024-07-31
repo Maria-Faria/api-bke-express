@@ -1,0 +1,25 @@
+{
+  "name": "api-bke-express",
+  "version": "1.0.0",
+  "description": "API Node com framework express",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maria-Faria/api-bke-express.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express",
+    "zod"
+  ],
+  "author": "Maria Eduarda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maria-Faria/api-bke-express/issues"
+  },
+  "homepage": "https://github.com/Maria-Faria/api-bke-express#readme"
+}
