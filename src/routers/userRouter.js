@@ -1,35 +1,18 @@
 import express from 'express';
+import userList from '../controllers/user/userList.js';
+import userById from '../controllers/user/userById.js';
+import insertUser from '../controllers/user/insertUser.js';
+import editUser from '../controllers/user/editUser.js';
+import editNameUser from '../controllers/user/editNameUser.js';
+import deleteUser from '../controllers/user/deleteUser.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.json({
-        message: "Rota GET no /user"
-    });
-});
-
-router.post('/', (req, res) => {
-    res.json({
-        message: "Rota POST no /user"
-    });
-});
-
-router.put('/', (req, res) => {
-    res.json({
-        message: "Rota PUT no /user"
-    });
-});
-
-router.patch('/', (req, res) => {
-    res.json({
-        message: "Rota PATCH no /user"
-    });
-});
-
-router.delete('/', (req, res) => {
-    res.json({
-        message: "Rota DELETE no /user"
-    });
-});
+router.get('/', userById);
+router.get('/list', userList);
+router.post('/', insertUser);
+router.put('/', editUser);
+router.patch('/', editNameUser);
+router.delete('/', deleteUser);
 
 export default router;
