@@ -1,7 +1,7 @@
-import userModel from '../../models/userModel.js';
+import { getAll } from '../../models/userModel.js';
 
 const userList = (req, res) => {
-    const users = userModel.getAll();
+    const users = getAll();
     res.json(users);
 };
 

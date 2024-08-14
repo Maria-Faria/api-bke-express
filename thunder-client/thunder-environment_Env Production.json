@@ -1,0 +1,14 @@
+{
+    "clientName": "Thunder Client",
+    "environmentName": "Env Production",
+    "environmentId": "476f9d8c-4756-45b7-89ac-4f5a4b7d0e09",
+    "dateExported": "2024-08-14T23:15:27.197Z",
+    "version": "1.2",
+    "variables": [
+        {
+            "name": "BASE_URL",
+            "value": "https://mysite.com"
+        }
+    ],
+    "ref": "bTYH8FkL5Oi9D6K_zhDHirSZ9CIxy3IxXWgdHu0kvxGBTDt0CJ8afa8o6YztSvIh"
+}
