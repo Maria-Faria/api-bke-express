@@ -1,7 +1,8 @@
-const productList = (req, res) => {
-    res.json({
-        message: "Rota GET /product/list"
-    })
+import { getAll } from "../../models/productModel.js";
+
+const productList = async (req, res) => {
+    const products = await getAll();
+    res.json(products);
 };
 
 export default productList;

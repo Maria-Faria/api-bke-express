@@ -1,7 +1,7 @@
 import { getAll } from '../../models/userModel.js';
 
-const userList = (req, res) => {
-    const users = getAll();
+const userList = async (req, res) => {
+    const users = await getAll();
     res.json(users);
 };
 
