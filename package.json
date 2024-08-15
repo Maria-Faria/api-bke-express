@@ -27,5 +27,8 @@
   "homepage": "https://github.com/Maria-Faria/api-bke-express#readme",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.18.0"
   }
 }
