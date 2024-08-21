@@ -10,6 +10,10 @@ const port = 3000;
 app.use('/user', userRouter);
 app.use('/product', productRouter);
 
+app.get('/', (req, res) => {
+    res.send('Hello, world');
+})
+
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${user.name}`);
     console.log(address);
