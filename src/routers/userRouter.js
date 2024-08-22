@@ -8,7 +8,7 @@ import deleteUser from '../controllers/user/deleteUser.js';
 
 const router = express.Router();
 
-router.get('/', userById);
+router.get('/:id', userById);
 router.get('/list', userList);
 router.post('/', insertUser);
 router.put('/', editUser);
