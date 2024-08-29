@@ -8,11 +8,11 @@ import productList from '../controllers/products/productList.js'
 
 const router = express.Router();
 
-router.get('/', productById);
-router.get('/list', productList);
 router.post('/', insertProduct);
-router.put('/', editProduct);
-router.patch('/', editNameProduct);
-router.delete('/', deleteProduct);
+router.get('/list', productList);
+router.get('/:id', productById);
+router.put('/:id', editProduct);
+router.patch('/:id', editNameProduct);
+router.delete('/:id', deleteProduct);
 
 export default router;
