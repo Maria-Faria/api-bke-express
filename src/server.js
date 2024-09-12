@@ -5,6 +5,7 @@ import { PORT, HOST, ENVIRONMENT } from './config.js';
 import notFound from './controllers/notFound.js';
 import logger from './middlewares/logger.js';
 import welcome from './controllers/welcome.js';
+import errorHandler from './middlewares/errorHandler.js';
 
 const app = express();
 
