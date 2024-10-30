@@ -30,6 +30,8 @@
   "homepage": "https://github.com/Maria-Faria/api-bke-express#readme",
   "dependencies": {
     "@prisma/client": "^5.18.0",
+    "api-bke-express": "file:",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "zod": "^3.23.8"
   },

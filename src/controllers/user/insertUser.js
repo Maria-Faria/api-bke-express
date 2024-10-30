@@ -3,7 +3,7 @@ import { create, validateUser, validateUserToCreate } from "../../models/userMod
 const insertUser = async (req, res) => {
     try {
         const user = req.body;
-
+        
         const userValidated = validateUserToCreate(user);
 
         console.log(userValidated);
