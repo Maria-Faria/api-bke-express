@@ -1,5 +1,7 @@
 import { validateUserToLogin, getByEmail } from "../../models/userModel.js";
 import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { SECRET_KEY } from "../../config.js";
 
 const login = async (req, res) => {
     try {
@@ -31,8 +33,10 @@ const login = async (req, res) => {
             })
         }
 
-        console.log(user)
-        return res.json({user});
+        const token = jwt.sign({name: user.name, publicID: user.public_id}, SECRET_KEY, { expiresIn: 60 * 5})
+
+        console.log(token)
+        return res.json({ token });
         
     } catch (error) {
         console.log(error);
