@@ -1,4 +1,6 @@
 import { create, validateUser, validateUserToCreate } from "../../models/userModel.js";
+import { v4 as uuid } from 'uuid';
+import bcrypt from 'bcrypt';
 
 const insertUser = async (req, res) => {
     try {
@@ -15,7 +17,10 @@ const insertUser = async (req, res) => {
             });
         }
 
-        const result = await create(user);
+        userValidated.data.public_id = uuid();
+        userValidated.data.password = bcrypt.hashSync(userValidated.data.password, 10);
+
+        const result = await create(userValidated.data);
 
         return res.json({
             success: "Usuário cadastrado com sucesso!",

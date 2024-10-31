@@ -8,10 +8,11 @@ datasource db {
 }
 
 model user {
-  id       Int    @id @default(autoincrement())
-  name     String @db.VarChar(100)
-  email    String @unique(map: "email_UNIQUE") @db.VarChar(200)
-  password String @db.VarChar(256)
+  id        Int    @id @default(autoincrement())
+  public_id String @db.VarChar(300)
+  name      String @db.VarChar(100)
+  email     String @unique(map: "email_UNIQUE") @db.VarChar(200)
+  password  String @db.VarChar(256)
 }
 
 model product {
